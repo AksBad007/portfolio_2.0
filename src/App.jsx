@@ -1,7 +1,7 @@
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
 import About from './components/about/About'
-import Education from './components/education/Education'
+// import Education from './components/education/Education'
 import Skills from './components/skills/Skills'
 import Projects from './components/projects/Projects'
 import Contact from './components/contact/Contact'
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Nav />
       <About />
-      <Education />
+      {/* <Education /> */}
       <Skills />
       <Projects />
       <Contact />

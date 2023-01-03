@@ -1,7 +1,7 @@
-import './About.css'
 import ME from '../../assets/profile 2.jpg'
 import { FaAward } from 'react-icons/fa'
 import { VscFolderLibrary } from 'react-icons/vsc'
+import './About.css'
 
 const About = () => {
   return (

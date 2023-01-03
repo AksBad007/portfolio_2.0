@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import './Nav.css'
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
 import { BiBook, BiMessageSquareDetail } from 'react-icons/bi'
 import { SiCodeproject } from 'react-icons/si'
+import './Nav.css'
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState('#')

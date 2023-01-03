@@ -1,5 +1,5 @@
-import './Skills.css'
 import { BsPatchCheckFill } from 'react-icons/bs'
+import './Skills.css'
 
 const Skills = () => {
   return (
