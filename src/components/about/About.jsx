@@ -1,13 +1,13 @@
-import ME from '../../assets/profile 2.jpg'
 import { FaAward } from 'react-icons/fa'
 import { VscFolderLibrary } from 'react-icons/vsc'
+import Heading from '../common/Heading'
+import ME from '../../assets/profile 2.jpg'
 import './About.css'
 
 const About = () => {
   return (
     <section id="about">
-      <h5>Get Ton Know</h5>
-      <h2>About Me</h2>
+      <Heading intro="Get To Know" main="About Me"/>
 
       <div className="container about__container">
         <div className="about__me">
@@ -27,12 +27,13 @@ const About = () => {
             <article className="about__card">
               <VscFolderLibrary className='about__icon'/>
               <h5>Projects</h5>
-              <small>3 Personal Projects</small>
+              <small>2 Personal Projects</small>
             </article>
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laboriosam quibusdam est obcaecati incidunt! Quibusdam perspiciatis quod culpa qui, dignissimos, corporis nisi ratione tenetur quae consequuntur consequatur et sed sit?
+            Aspiring Data Scientist and Diligent Full-Stack Developer with experience in both
+            SQL and No SQL Databases and in technologies like React.js, Node.js and Flask.
           </p>
 
           <a href="#contact" className="btn btn-primary">

@@ -1,29 +1,15 @@
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { projectsData } from '../common/data'
+import Heading from '../common/Heading';
 import './Projects.css'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-const projectsData = [
-  {
-    id: 1,
-    title: 'Project K.I.S.S. - Keep It Simple Stupid',
-    github: "https://github.com/AksBad007/Project-K.I.S.S.",
-    demo: "http://project-k-i-s-s-aksbad007.vercel.app/"
-  },
-  {
-    id: 2,
-    title: 'Chatter-Type',
-    github: "https://github.com/AksBad007/chatter-type",
-    demo: "http://chatter-type.vercel.app/"
-  },
-]
-
 const Projects = () => {
   return (
     <section id="projects">
-      <h5>My Recent Work</h5>
-      <h2>Projects</h2>
+      <Heading intro="My Recent Work" main="Projects"/>
 
       <Swiper
         modules={[ Pagination ]}

@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import emailjs from 'emailjs-com'
 import { MdOutlineEmail } from 'react-icons/md'
 import { HiOutlinePhone } from 'react-icons/hi'
+import Heading from '../common/Heading'
 import './Contact.css'
 
 const Contact = () => {
@@ -22,8 +23,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
-      <h2>Contact Me</h2>
+      <Heading intro="Get In Touch" main="Contact Me"/>
 
       <div className="container contact__container">
         <div className="contact__options">
