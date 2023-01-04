@@ -7,7 +7,7 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <header className='container header__container'>
+    <header id='header' className='container header__container'>
       <Heading intro="Hello I'm" main="Akshat Arora"/>
 
       <h5 className="text-light">FullStack Developer/Data Scientist</h5>

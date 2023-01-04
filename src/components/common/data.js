@@ -77,3 +77,11 @@ export const skillsData = [
         ]
     },
 ]
+
+export const isInViewport = (element) => {
+    const rect = element.getBoundingClientRect()
+    return (
+        rect.top <= window.innerHeight / 3 ||
+        rect.bottom <= window.innerHeight / 3
+    )
+}

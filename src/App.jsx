@@ -1,7 +1,7 @@
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
 import About from './components/about/About'
-// import Education from './components/education/Education'
+import Qualifications from './components/qualifications/Qualifications'
 import Skills from './components/skills/Skills'
 import Projects from './components/projects/Projects'
 import Contact from './components/contact/Contact'
@@ -13,7 +13,7 @@ const App = () => {
       <Header />
       <Nav />
       <About />
-      {/* <Education /> */}
+      <Qualifications />
       <Skills />
       <Projects />
       <Contact />
