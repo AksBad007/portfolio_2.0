@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { projectsData } from '../common/data'
@@ -7,6 +8,19 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 const Projects = () => {
+  const [slidesPerView, updateSlidesPerView] = useState(2)
+
+  const handleResize = () => {
+    if (window.innerWidth <= 700)
+      updateSlidesPerView(1)
+    else
+      updateSlidesPerView(2)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+  }, [])
+
   return (
     <section id="projects">
       <Heading intro="My Recent Work" main="Projects"/>
@@ -14,7 +28,7 @@ const Projects = () => {
       <Swiper
         modules={[ Pagination ]}
         spaceBetween={ 40 }
-        slidesPerView={ 2 }
+        slidesPerView={ slidesPerView }
         navigation
         pagination={{ clickable: true }}
         className="container projects__container"
