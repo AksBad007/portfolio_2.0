@@ -11,6 +11,12 @@ export const projectsData = [
       github: 'https://github.com/AksBad007/chatter-type',
       demo: 'http://chatter-type.vercel.app/'
     },
+    {
+      id: 3,
+      title: 'Dev-Assist',
+      github: 'https://github.com/PriyavKaneria/Dev-Assist',
+      demo: 'https://priyavkaneria.github.io/Dev-Assist/'
+    }
 ]
 
 export const skillsData = [
@@ -84,4 +90,8 @@ export const isInViewport = (element) => {
         rect.top <= window.innerHeight / 3 ||
         rect.bottom <= window.innerHeight / 3
     )
+}
+
+export const redirect = (destination) => {
+    document.getElementById(destination).scrollIntoView({ behavior: 'smooth', block: 'center' })
 }

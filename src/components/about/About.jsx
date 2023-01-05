@@ -1,6 +1,7 @@
 import { FaAward } from 'react-icons/fa'
 import { VscFolderLibrary } from 'react-icons/vsc'
 import Heading from '../common/Heading'
+import { redirect } from '../common/data'
 import ME from '../../assets/profile 2.jpg'
 import './About.css'
 
@@ -12,7 +13,7 @@ const About = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={ME} alt="my other pic" />
+            <img src={ ME } alt="my other pic" />
           </div>
         </div>
 
@@ -27,7 +28,7 @@ const About = () => {
             <article className="about__card">
               <VscFolderLibrary className='about__icon'/>
               <h5>Projects</h5>
-              <small>2 Personal Projects</small>
+              <small>3 Personal Projects</small>
             </article>
           </div>
 
@@ -36,9 +37,9 @@ const About = () => {
             SQL and No SQL Databases and in technologies like React.js, Node.js and Flask.
           </p>
 
-          <a href="#contact" className="btn btn-primary">
+          <button onClick={() => redirect('contact')} className="btn btn-primary">
             Let's Talk
-          </a>
+          </button>
         </div>
       </div>
     </section>

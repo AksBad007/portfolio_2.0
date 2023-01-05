@@ -6,8 +6,10 @@ footer {
     margin-top: 7rem;
 }
 
-footer a {
+footer button {
     color: var(--color-bg);
+    background: transparent;
+    cursor: pointer;
 }
 
 .footer__logo {

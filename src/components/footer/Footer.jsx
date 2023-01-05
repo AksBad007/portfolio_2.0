@@ -1,20 +1,21 @@
 import { FiInstagram } from 'react-icons/fi'
 import { BsLinkedin } from 'react-icons/bs'
 import { IoLogoDiscord } from 'react-icons/io5'
+import { redirect } from '../common/data'
 import './Footer.css'
 
 const Footer = () => {
   return (
     <footer>
-      <a href="#" className='footer__logo'>Akshat Arora</a>
+      <button onClick={() => redirect('header')} className='footer__logo'>Akshat Arora</button>
 
       <ul className="permalinks">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+        <li><button onClick={() => redirect('header')}>Home</button></li>
+        <li><button onClick={() => redirect('about')}>About Me</button></li>
+        <li><button onClick={() => redirect('qualifications')}>Qualifications</button></li>
+        <li><button onClick={() => redirect('skills')}>Skills</button></li>
+        <li><button onClick={() => redirect('projects')}>Projects</button></li>
+        <li><button onClick={() => redirect('contact')}>Contact Me</button></li>
       </ul>
 
       <div className="footer__socials">
@@ -24,7 +25,7 @@ const Footer = () => {
       </div>
 
       <div className="footer__copyright">
-        <small>&copy; 2023 Made with ❤️ by Akshat Arora</small>
+        <small>&copy; { new Date().getFullYear() } Made with ❤️ by Akshat Arora</small>
       </div>
     </footer>
   )

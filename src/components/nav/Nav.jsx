@@ -3,15 +3,11 @@ import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
 import { BiBook, BiMessageSquareDetail } from 'react-icons/bi'
 import { BsFileCode } from 'react-icons/bs'
 import { SiCodeproject } from 'react-icons/si'
-import { isInViewport } from '../common/data'
+import { isInViewport, redirect } from '../common/data'
 import './Nav.css'
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState('header')
-
-  const redirect = (destination) => {
-    document.getElementById(destination).scrollIntoView({ behavior: 'smooth', block: 'center' })
-  }
 
   const handleScroll = () => {
     ['header', 'about', 'qualifications', 'skills', 'projects', 'contact'].forEach(element => {
