@@ -25,7 +25,7 @@ const Footer = () => {
       </div>
 
       <div className="footer__copyright">
-        <small>&copy; { new Date().getFullYear() } Made with ❤️ by Akshat Arora</small>
+        <small>&copy; { new Date().getFullYear() } Made with ❤️ by <a href='https://github.com/AksBad007' target='_blank'>Akshat Arora</a></small>
       </div>
     </footer>
   )

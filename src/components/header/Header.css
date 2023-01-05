@@ -51,12 +51,20 @@ header {
 
 /* SCROLL DOWN */
 .scroll__down {
+    background: transparent;
+    color: var(--color-primary);
+    transition: var(--transition);
+    cursor: pointer;
     position: absolute;
     bottom: 5rem;
     right: -2rem;
     transform: rotate(90deg);
     font-weight: 300;
     font-size: 0.9rem;
+}
+
+.scroll__down:hover {
+    color: var(--color-white);
 }
 
 /* TABLET STYLES */

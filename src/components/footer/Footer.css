@@ -10,6 +10,11 @@ footer button {
     color: var(--color-bg);
     background: transparent;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    color: var(--color-white);
 }
 
 .footer__logo {
@@ -51,6 +56,10 @@ footer button {
 
 .footer__copyright {
     margin-bottom: 4rem;
+    color: var(--color-bg);
+}
+
+.footer__copyright a {
     color: var(--color-bg);
 }
 
