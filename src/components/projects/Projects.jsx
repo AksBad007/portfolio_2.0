@@ -34,8 +34,8 @@ const Projects = () => {
         className="container projects__container"
       >
         {
-          projectsData.map(({ id, title, github, demo }) => (
-            <SwiperSlide key={ id } className="project__item">
+          projectsData.map(({ title, github, demo }, idx) => (
+            <SwiperSlide key={ idx } className="project__item">
               <h3>{ title }</h3>
               <div className="project__item-cta">
                 <a href={ github } className="btn" target='_blank'>GitHub</a>

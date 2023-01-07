@@ -10,13 +10,13 @@ const Skills = () => {
 
       <div className="container skills__container">
         {
-          skillsData.map(({ id, domain, skills }) => (
-            <div key={ id }>
+          skillsData.map(({ domain, skills }, idx) => (
+            <div key={ idx }>
               <h3>{ domain }</h3>
               <div className="skills__content">
                 {
-                  skills.map(({ id, name, lvl }) => (
-                    <article key={ id } className="skills__details">
+                  skills.map(({ name, lvl }, idx) => (
+                    <article key={ idx } className="skills__details">
                       <BsPatchCheckFill className='skills__details-icon' />
                       <div>
                         <h4>{ name }</h4>
