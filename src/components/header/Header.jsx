@@ -1,7 +1,5 @@
-import { BsLinkedin } from 'react-icons/bs'
-import { FaGithub } from 'react-icons/fa'
 import Heading from '../common/Heading'
-import { redirect } from '../common/data'
+import { headerSocials, redirect } from '../common/data'
 import Resume from '../../assets/resume-Akshat Arora.pdf'
 import ME from '../../assets/profile.jpg'
 import './Header.css'
@@ -19,12 +17,15 @@ const Header = () => {
       </div>
 
       <div className='header__socials'>
-        <a href="https://www.linkedin.com/in/akshat-arora-007/" target="_blank"><BsLinkedin /></a>
-        <a href="https://github.com/AksBad007" target="_blank"><FaGithub /></a>
+        {
+          headerSocials.map(({ link, icon }, id) => (
+            <a key={ id } href={ link } target="_blank" rel='noreferrer'>{ icon }</a>
+          ))
+        }
       </div>
 
       <div className="me">
-        <img src={ME} alt="my profile pic" />
+        <img src={ ME } alt="my profile pic" />
       </div>
 
       <button onClick={() => redirect('contact')} className='scroll__down'>Scroll Down</button>

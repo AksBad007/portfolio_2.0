@@ -41,7 +41,7 @@
 }
 
 .about__card:hover {
-    background: transparent;
+    background: var(--color-hover);
     border-color: var(--color-bg-variant);
     cursor: default;
 }

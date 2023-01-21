@@ -1,50 +1,30 @@
-import { useState, useEffect } from 'react'
-import { Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react'
 import { projectsData } from '../common/data'
 import Heading from '../common/Heading';
+import SwiperSlider from '../common/SwiperSlider';
 import './Projects.css'
-import 'swiper/css'
-import 'swiper/css/pagination'
 
 const Projects = () => {
-  const [slidesPerView, updateSlidesPerView] = useState(2)
-
-  const handleResize = () => {
-    if (window.innerWidth <= 700)
-      updateSlidesPerView(1)
-    else
-      updateSlidesPerView(2)
-  }
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize)
-  }, [])
+  const projectItems = projectsData.map(({ title, desc, github, demo }) => (
+    <>
+      <h3>{ title }</h3>
+      <p>{ desc }</p>
+      <div className="project__item-cta">
+        <a href={ github } className="btn" target='_blank' rel="noreferrer">GitHub</a>
+        { demo && <a href={ demo } className="btn btn-primary" target='_blank' rel="noreferrer">Demo</a> }
+      </div>
+    </>
+  ))
 
   return (
     <section id="projects">
       <Heading intro="My Recent Work" main="Projects"/>
 
-      <Swiper
-        modules={[ Pagination ]}
-        spaceBetween={ 40 }
-        slidesPerView={ slidesPerView }
-        navigation
-        pagination={{ clickable: true }}
-        className="container projects__container"
-      >
-        {
-          projectsData.map(({ title, github, demo }, idx) => (
-            <SwiperSlide key={ idx } className="project__item">
-              <h3>{ title }</h3>
-              <div className="project__item-cta">
-                <a href={ github } className="btn" target='_blank'>GitHub</a>
-                <a href={ demo } className="btn btn-primary" target='_blank'>Demo</a>
-              </div>
-            </SwiperSlide>
-          ))
-        }
-      </Swiper>
+      <SwiperSlider
+        swiperClass='projects__container'
+        itemClass='project__item'
+        minWidth={ 700 }
+        content={ projectItems }
+      />
     </section>
   )
 }

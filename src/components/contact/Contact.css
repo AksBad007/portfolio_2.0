@@ -20,8 +20,9 @@
 }
 
 .contact__option:hover {
-    background: transparent;
-    border-color: var(--color-primary-variant);
+    background: var(--color-hover);
+    border-color: var(--color-bg-variant);
+    cursor: default;
 }
 
 .contact__option-icon {

@@ -13,12 +13,17 @@
     padding: 1.3rem;
     border-radius: 2rem;
     border: 1px solid transparent;
-    transition: var(--transition);
+    transition: var(--transition) !important;
 }
 
 .project__item:hover {
-    border-color: var(--color-primary-variant);
-    background: transparent;
+    background: var(--color-hover);
+    border-color: var(--color-bg-variant);
+    cursor: default;
+}
+
+.project__item p {
+    margin-bottom: 1rem;
 }
 
 .project__item h3 {
@@ -29,10 +34,6 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
-}
-
-.swiper-pagination-clickable .swiper-pagination-bullet {
-    background: var(--color-primary);
 }
 
 /* TABLET STYLES */
