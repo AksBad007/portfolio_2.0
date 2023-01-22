@@ -1,29 +1,41 @@
-import { useRef } from 'react'
-import emailjs from 'emailjs-com'
-import { MdOutlineEmail } from 'react-icons/md'
+import { useState, useRef } from 'react'
 import { HiOutlinePhone } from 'react-icons/hi'
+import { MdOutlineEmail } from 'react-icons/md'
+import { RiSendPlaneFill } from 'react-icons/ri'
+import { ToastContainer, toast } from 'react-toastify'
+import emailjs from 'emailjs-com'
 import Heading from '../common/Heading'
+import Loader from '../common/Loader'
+import 'react-toastify/dist/ReactToastify.css'
 import './Contact.css'
 
 const Contact = () => {
+  const [loadingState, setLoadingState] = useState(false)
   const form = useRef()
 
   const sendEmail = (e) => {
     e.preventDefault()
+    setLoadingState(true)
 
-    emailjs.sendForm('service_6t5z5ki', 'template_gu80mie', form.current, 'ixqj2fFFbP7ogPqgj')
-      // .then((result) => {
-      //   console.log(result.text)
-      // }, (error) => {
-      //   console.log(error.text)
-      // });
-
-    e.target.reset();
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAIL_SERVICE_ID,
+      process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+      form.current,
+      process.env.REACT_APP_EMAIL_USER_ID
+    )
+      .then(() => {
+        toast.info('Thanks for reaching out 😃.', { icon: false })
+        setLoadingState(false)
+        e.target.reset()
+      }, () => {
+        toast.error('Something Went Wrong!!!.')
+        setLoadingState(false)
+      });
   }
 
   return (
     <section id="contact">
-      <Heading intro="Get In Touch" main="Contact Me"/>
+      <Heading intro="Get In Touch" main="Contact Me" />
 
       <div className="container contact__container">
         <div className="contact__options">
@@ -37,18 +49,29 @@ const Contact = () => {
           <article className="contact__option">
             <HiOutlinePhone className='.contact__option-icon' />
             <h4>Phone</h4>
-            <h5>+7888688879</h5>
-            <a href="tel:+7888688879">Contact Me</a>
+            <h5>+91-7888688879</h5>
+            <a href="tel:+91-7888688879">Contact Me</a>
           </article>
         </div>
 
-        <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="name" id="" placeholder='Your Full Name' required />
-          <input type="email" name="email" id="" placeholder='Your Email' required />
-          <textarea name="message" rows='7'  id="" placeholder='Your Message' required></textarea>
-          <button type="submit" className='btn btn-primary'>Send Message</button>
+        <form ref={ form } onSubmit={ sendEmail }>
+          <input type="text" name="name" id="" placeholder='Your Full Name' disabled={ loadingState } required />
+          <input type="email" name="email" id="" placeholder='Your Email' disabled={ loadingState } required />
+          <textarea name="message" rows='7'  id="" placeholder='Your Message' disabled={ loadingState } required></textarea>
+          <button type="submit" className={ loadingState ? 'btn btn-primary' : 'btn btn-primary'} disabled={ loadingState }>
+            Send Message
+            { loadingState ? <Loader className='contact__option-send-icon' /> : <RiSendPlaneFill className='contact__option-send-icon' /> }
+          </button>
         </form>
       </div>
+
+      <ToastContainer
+        position="top-right"
+        hideProgressBar
+        newestOnTop
+        pauseOnFocusLoss
+        theme="colored"
+      />
     </section>
   )
 }

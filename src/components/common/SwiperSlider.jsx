@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-const SwiperSlider = ({ content, swiperClass, itemClass, minWidth }) => {
+const SwiperSlider = ({ content, swiperClass = '', itemClass = '', minWidth }) => {
   const [slidesPerView, updateSlidesPerView] = useState(2)
 
   const visibleSliders = useCallback(() => {

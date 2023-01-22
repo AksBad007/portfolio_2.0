@@ -79,18 +79,12 @@ img {
     width: 100%;
 }
 
-.container {
-    width: var(--container-width-lg);
-    margin: 0 auto;
-}
-
-.text-light {
-    color: var(--color-light);
+button.btn-primary {
+    font-size: 1rem;
 }
 
 .btn {
     width: max-content;
-    display: inline-block;
     color: var(--color-primary);
     padding: 0.75rem 1.2rem;
     border-radius: 0.4rem;
@@ -110,6 +104,19 @@ img {
     color: var(--color-bg);
 }
 
+.btn-flex {
+    display: inline-flex !important;
+    align-items: center;
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+.text-light {
+    color: var(--color-light);
+}
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
     background: var(--color-primary);
@@ -130,6 +137,10 @@ img {
 @media screen and (max-width: 600px) {
     section > h2 {
         margin-bottom: 2rem;
+    }
+
+    .btn-flex {
+        padding: 0.7rem !important;
     }
 
     .container {

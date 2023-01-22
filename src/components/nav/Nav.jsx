@@ -18,7 +18,7 @@ const Nav = () => {
     <nav>
       {
         navData.map(({ section, title, icon }, id) => (
-          <button key={ id } title={ title } onClick={() => redirect(section)} className={activeNav === section ? 'active' : ''}>{ icon }</button>
+          <button key={ id } title={ title } onClick={() => redirect(section)} className={ activeNav === section ? 'active' : '' }>{ icon }</button>
         ))
       }
     </nav>

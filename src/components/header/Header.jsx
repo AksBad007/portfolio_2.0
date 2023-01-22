@@ -28,7 +28,7 @@ const Header = () => {
         <img src={ ME } alt="my profile pic" />
       </div>
 
-      <button onClick={() => redirect('contact')} className='scroll__down'>Scroll Down</button>
+      <button onClick={() => redirect('about')} className='scroll__down'>Scroll Down</button>
     </header>
   )
 }
