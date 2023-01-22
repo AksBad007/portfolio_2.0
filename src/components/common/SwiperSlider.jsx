@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
@@ -7,14 +7,19 @@ import 'swiper/css/pagination'
 const SwiperSlider = ({ content, swiperClass, itemClass, minWidth }) => {
   const [slidesPerView, updateSlidesPerView] = useState(2)
 
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth <= minWidth)
-        updateSlidesPerView(1)
-      else
-        updateSlidesPerView(2)
-    })
+  const visibleSliders = useCallback(() => {
+    if (window.innerWidth <= minWidth)
+      updateSlidesPerView(1)
+    else
+      updateSlidesPerView(2)
   }, [ minWidth ])
+
+  useEffect(() => {
+    console.log("effect");
+    visibleSliders()
+
+    window.addEventListener('resize', visibleSliders)
+  }, [ visibleSliders ])
 
   return (
     <Swiper
