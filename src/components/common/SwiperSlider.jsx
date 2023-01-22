@@ -15,7 +15,6 @@ const SwiperSlider = ({ content, swiperClass, itemClass, minWidth }) => {
   }, [ minWidth ])
 
   useEffect(() => {
-    console.log("effect");
     visibleSliders()
 
     window.addEventListener('resize', visibleSliders)
