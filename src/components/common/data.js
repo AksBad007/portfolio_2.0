@@ -109,6 +109,10 @@ export const skillsData = [
                 name: 'React.js',
                 lvl: 'Beginner'
             },
+            {
+                name: 'Angular.js',
+                lvl: 'Beginner'
+            }
         ]
     },
     {
@@ -179,12 +183,12 @@ export const educationData = [
 ]
 
 export const xpData = [
-    {
-        role: 'Web Developer',
-        company: 'Mansa Infotech',
-        location: 'Punjab, India',
-        date: 'July 2022 - Present'
-    },
+    // {
+    //     role: 'Web Developer',
+    //     company: 'Mansa Infotech',
+    //     location: 'Punjab, India',
+    //     date: 'July 2022 - Present'
+    // },
     {
         role: 'Backend Developer',
         company: 'Rock IT Solutions',
