@@ -133,7 +133,7 @@ export const skillsData = [
         skills: [
             {
                 name: 'C/C++',
-                lvl: 'Intermediate'
+                lvl: 'Beginner'
             },
             {
                 name: 'JavaScript',
