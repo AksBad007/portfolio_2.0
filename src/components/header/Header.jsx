@@ -1,7 +1,6 @@
 import Heading from '../common/Heading'
 import { headerSocials, redirect } from '../common/data'
-import Resume from '../../assets/resume-Akshat Arora_2022.pdf'
-// import Resume from '../../assets/resume-Akshat Arora.pdf'
+import Resume from '../../assets/resume-Akshat Arora.pdf'
 import ME from '../../assets/profile.jpg'
 import './Header.css'
 
