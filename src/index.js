@@ -1,14 +1,14 @@
 import { StrictMode } from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import reportWebVitals from './reportWebVitals'
 import App from './App'
 import './index.css'
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+createRoot(document.getElementById('root'))
+  .render(
+    <StrictMode>
+      <App />
+    </StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function

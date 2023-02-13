@@ -12,7 +12,7 @@ const Header = () => {
       <h5 className="text-light">FullStack Developer/Data Scientist</h5>
 
       <div className='cta'>
-          <a href={ Resume } download className='btn'>Download Resume</a>
+          <a href={ Resume } download='Resume-Akshat Arora' className='btn'>Download Resume</a>
           <button onClick={() => redirect('contact')} className='btn btn-primary'>Let's Talk</button>
       </div>
 
