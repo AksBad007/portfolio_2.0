@@ -31,7 +31,7 @@ nav button.active {
     color: var(--color-bg);
 }
 
-
+/* MOBILE STYLES */
 @media screen and (max-width: 600px) {
     nav {
         padding: 0.7rem;

@@ -10,7 +10,7 @@ const diff_years = (dt2, dt1) => {
     let diff = (dt2.getTime() - dt1.getTime()) / 1000;
         diff /= (60 * 60 * 24);
 
-    return Math.abs(Math.round(diff/365.25));
+    return Math.abs(Math.floor(diff/365.25));
 }
 
 const LinkedInSocial = {
@@ -63,25 +63,31 @@ export const navData = [
 
 export const projectsData = [
     {
-      title: 'Project K.I.S.S. - Keep It Simple Stupid',
-      desc: `The project is aimed to provide an immersive experience for 
-            frontend practice (HTML, CSS and JavaScript) along with the presence of a Music 
-            Player and a To-Do List.`,
-      github: 'https://github.com/AksBad007/Project-K.I.S.S.',
-      demo: 'http://project-k-i-s-s-aksbad007.vercel.app/'
+        title: 'Remember It - A Calendar App',
+        desc: `A Calendar App, made using Next.js and inspired by Google Calendar, allowing users to
+                schedule events, add friends and more. It provides real-time updates and timely reminders
+                for easy time-management.`
     },
     {
-      title: 'Chatter-Type',
-      desc: `A terminal-style chat application built using Electron.js and Socket.IO.`,
-      github: 'https://github.com/AksBad007/chatter-type',
+        title: 'STUK Software',
+        desc: `STUK is a Tow Management Software that offers complete tow management software. We developed this software
+                placing the business first, allowing a trouble free and transparent service to the customer.`
     },
     {
-      title: 'Dev-Assist',
-      desc: `This Virtual Assistant was created for 
-            TreeHacks annual Hackathon 2021, hosted by Stanford University. It takes user’s 
-            queries related to coding as input and scrapes the internet to provide a solution.`,
-      github: 'https://github.com/PriyavKaneria/Dev-Assist',
-      demo: 'https://priyavkaneria.github.io/Dev-Assist/'
+        title: 'Zillit',
+        desc: `ZILLIT App is all encompassing communication tool for the Entertainment Industry professionals and
+                for professionals in Other fields.`
+    },
+    {
+        title: 'Project K.I.S.S. - Keep It Simple Stupid',
+        desc: `The project is aimed to provide an immersive experience for 
+                frontend practice (HTML, CSS and JavaScript) along with the presence of a Music 
+                Player and a To-Do List.`
+    },
+    {
+        title: 'Dev-Assist',
+        desc: `This Virtual Assistant takes user’s queries related to coding as input and scrapes the
+                internet to provide a solution.`
     }
 ]
 
@@ -99,7 +105,7 @@ export const skillsData = [
             },
             {
                 name: 'BOOTSTRAP',
-                lvl: 'Beginner'
+                lvl: 'Intermediate'
             },
             {
                 name: 'JQuery',
@@ -107,11 +113,11 @@ export const skillsData = [
             },
             {
                 name: 'React.js',
-                lvl: 'Beginner'
+                lvl: 'Experienced'
             },
             {
                 name: 'Angular.js',
-                lvl: 'Beginner'
+                lvl: 'Intermediate'
             }
         ]
     },
@@ -123,8 +129,12 @@ export const skillsData = [
                 lvl: 'Experienced'
             },
             {
+                name: 'Next.js',
+                lvl: 'Experienced'
+            },
+            {
                 name: 'Flask',
-                lvl: 'Intermediate'
+                lvl: 'Experienced'
             }
         ]
     },
@@ -138,6 +148,10 @@ export const skillsData = [
             {
                 name: 'JavaScript',
                 lvl: 'Experienced'
+            },
+            {
+                name: 'TypeScript',
+                lvl: 'Intermediate'
             },
             {
                 name: 'Python',
@@ -154,7 +168,7 @@ export const skillsData = [
             },
             {
                 name: 'MongoDB',
-                lvl: 'Intermediate'
+                lvl: 'Experienced'
             },
             {
                 name: 'Linux',
@@ -227,6 +241,4 @@ export const isInViewport = (element) => {
     )
 }
 
-export const redirect = (destination) => {
-    document.getElementById(destination).scrollIntoView({ behavior: 'smooth', block: 'center' })
-}
+export const redirect = (destination) => document.getElementById(destination).scrollIntoView({ behavior: 'smooth', block: 'center' })

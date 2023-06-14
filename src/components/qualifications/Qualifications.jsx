@@ -11,16 +11,16 @@ const Qualifications = () => {
   const toggleTab = (idx) => updateToggleState(idx)
 
   return (
-    <section id="qualifications">
-      <Heading intro="My Personal Journey" main="Qualifications"/>
+    <section id='qualifications'>
+      <Heading intro='My Personal Journey' main='Qualifications'/>
 
-      <div className="container qualifications__container">
-        <div className="qualifications__tabs">
+      <div className='container qualifications__container'>
+        <div className='qualifications__tabs'>
           <div
             className={
               toggleState === 1
-              ? "qualifications__btn btn btn-primary qualifications__active btn-flex"
-              : "qualifications__btn btn btn-flex"
+              ? 'qualifications__btn btn btn-primary qualifications__active btn-flex'
+              : 'qualifications__btn btn btn-flex'
             }
             onClick={() => toggleTab(1)}
           >
@@ -30,8 +30,8 @@ const Qualifications = () => {
           <div
             className={
               toggleState === 2
-              ? "qualifications__btn btn btn-primary qualifications__active btn-flex"
-              : "qualifications__btn btn btn-flex"
+              ? 'qualifications__btn btn btn-primary qualifications__active btn-flex'
+              : 'qualifications__btn btn btn-flex'
             }
             onClick={() => toggleTab(2)}
           >
@@ -39,32 +39,32 @@ const Qualifications = () => {
           </div>
         </div>
 
-        <div className="qualifications__sections">
+        <div className='qualifications__sections'>
           <div className={
             toggleState === 1
-            ? "qualifications__content qualifications__content-active"
-            : "qualifications__content"
+            ? 'qualifications__content qualifications__content-active'
+            : 'qualifications__content'
           }>
             {
               educationData.map(({ major, school, date }, id) => {
                 let content =
                   <>
-                    <h3 className="qualifications__title">{ major }</h3>
-                    <span className="qualifications__subtitle">{ school }</span>
-                    <div className="qualifications__calendar">
+                    <h3 className='qualifications__title'>{ major }</h3>
+                    <span className='qualifications__subtitle'>{ school }</span>
+                    <div className='qualifications__calendar'>
                       <BsCalendar3 /> { date }
                     </div>
                   </>
 
                 return (
-                  <div key={ id } className="qualifications__data">
+                  <div key={ id } className='qualifications__data'>
                     <div>
                       { id % 2 === 0 && content }
                     </div>
 
                     <div>
-                      <span className="qualifications__rounder"></span>
-                      <span className="qualifications__line"></span>
+                      <span className='qualifications__rounder'></span>
+                      <span className='qualifications__line'></span>
                     </div>
 
                     <div>
@@ -78,29 +78,29 @@ const Qualifications = () => {
 
           <div className={
             toggleState === 2
-            ? "qualifications__content qualifications__content-active"
-            : "qualifications__content"
+            ? 'qualifications__content qualifications__content-active'
+            : 'qualifications__content'
           }>
             {
               xpData.map(({ role, company, location, date }, id) => {
                 let content =
                   <>
-                    <h3 className="qualifications__title">{ role }</h3>
-                    <span className="qualifications__subtitle">{ company } - { location }</span>
-                    <div className="qualifications__calendar">
+                    <h3 className='qualifications__title'>{ role }</h3>
+                    <span className='qualifications__subtitle'>{ company } - { location }</span>
+                    <div className='qualifications__calendar'>
                       <BsCalendar3 /> { date }
                     </div>
                   </>
 
                 return (
-                  <div key={ id } className="qualifications__data">
+                  <div key={ id } className='qualifications__data'>
                     <div>
                       { id % 2 === 0 && content }
                     </div>
 
                     <div>
-                      <span className="qualifications__rounder"></span>
-                      <span className="qualifications__line"></span>
+                      <span className='qualifications__rounder'></span>
+                      <span className='qualifications__line'></span>
                     </div>
 
                     <div>

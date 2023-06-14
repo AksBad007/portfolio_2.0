@@ -8,14 +8,14 @@ const Skills = () => {
   let skillItems = skillsData.map(({ domain, skills }) => (
     <div>
       <h3>{ domain }</h3>
-      <div className="skills__content">
+      <div className='skills__content'>
         {
           skills.map(({ name, lvl }, id) => (
-            <article key={ id } className="skills__details">
+            <article key={ id } className='skills__details'>
               <BsPatchCheckFill className='skills__details-icon' />
               <div>
                 <h4>{ name }</h4>
-                <small className="text-light">{ lvl }</small>
+                <small className='text-light'>{ lvl }</small>
               </div>
             </article>
           ))
@@ -25,8 +25,8 @@ const Skills = () => {
   ))
 
   return (
-    <section id="skills">
-      <Heading intro="What Skills I Have" main="Skills"/>
+    <section id='skills'>
+      <Heading intro='What Skills I Have' main='Skills'/>
 
       <SwiperSlider
         swiperClass='skills__container'

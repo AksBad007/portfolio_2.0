@@ -34,31 +34,31 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact">
-      <Heading intro="Get In Touch" main="Contact Me" />
+    <section id='contact'>
+      <Heading intro='Get In Touch' main='Contact Me' />
 
-      <div className="container contact__container">
-        <div className="contact__options">
-          <article className="contact__option">
+      <div className='container contact__container'>
+        <div className='contact__options'>
+          <article className='contact__option'>
             <MdOutlineEmail className='.contact__option-icon' />
             <h4>Email</h4>
             <h5>arora.akshat007@gmail.com</h5>
-            <a href="mailto:arora.akshat007@gmail.com">Send a Message</a>
+            <a href='mailto:arora.akshat007@gmail.com'>Send a Message</a>
           </article>
 
-          <article className="contact__option">
+          <article className='contact__option'>
             <HiOutlinePhone className='.contact__option-icon' />
             <h4>Phone</h4>
             <h5>+91-7888688879</h5>
-            <a href="tel:+91-7888688879">Contact Me</a>
+            <a href='tel:+91-7888688879'>Contact Me</a>
           </article>
         </div>
 
         <form ref={ form } onSubmit={ sendEmail }>
-          <input type="text" name="name" id="" placeholder='Your Full Name' disabled={ loadingState } required />
-          <input type="email" name="email" id="" placeholder='Your Email' disabled={ loadingState } required />
-          <textarea name="message" rows='7'  id="" placeholder='Your Message' disabled={ loadingState } required></textarea>
-          <button type="submit" className={ loadingState ? 'btn btn-primary' : 'btn btn-primary'} disabled={ loadingState }>
+          <input type='text' name='name' placeholder='Your Full Name' disabled={ loadingState } required />
+          <input type='email' name='email' placeholder='Your Email' disabled={ loadingState } required />
+          <textarea name='message' rows='7' placeholder='Your Message' disabled={ loadingState } required></textarea>
+          <button type='submit' className={ loadingState ? 'btn btn-primary' : 'btn btn-primary'} disabled={ loadingState }>
             Send Message
             { loadingState ? <Loader className='contact__option-send-icon' /> : <RiSendPlaneFill className='contact__option-send-icon' /> }
           </button>
@@ -66,11 +66,11 @@ const Contact = () => {
       </div>
 
       <ToastContainer
-        position="top-right"
+        position='top-right'
         hideProgressBar
         newestOnTop
         pauseOnFocusLoss
-        theme="colored"
+        theme='colored'
       />
     </section>
   )
