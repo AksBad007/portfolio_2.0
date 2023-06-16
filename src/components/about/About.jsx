@@ -2,7 +2,7 @@ import { FaAward } from 'react-icons/fa'
 import { VscFolderLibrary } from 'react-icons/vsc'
 import Heading from '../common/Heading'
 import CTA from '../common/CTA'
-import { totalProjects, totalXp } from '../common/data'
+import { intro, totalProjects, totalXp } from '../common/data'
 import ME from '../../assets/profile 2.jpg'
 import './About.css'
 
@@ -29,13 +29,12 @@ const About = () => {
             <article className='about__card'>
               <VscFolderLibrary className='about__icon'/>
               <h5>Projects</h5>
-              <small>{ totalProjects } Personal Projects</small>
+              <small>{ totalProjects } Projects</small>
             </article>
           </div>
 
           <p>
-            Aspiring Data Scientist and Diligent Full-Stack Developer with experience in both
-            SQL and No SQL Databases and in technologies like React.js, Node.js and Flask.
+            { intro }
           </p>
 
           <CTA />

@@ -5,6 +5,11 @@ import { FaGithub } from 'react-icons/fa'
 import { FiInstagram } from 'react-icons/fi'
 import { IoLogoDiscord } from 'react-icons/io5'
 import { SiCodeproject } from 'react-icons/si'
+import Remember_It from '../../assets/calendar-main.png'
+import KISS from '../../assets/editor.jpg'
+import Zillit from '../../assets/zillit.png'
+import STUK from '../../assets/stuk.png'
+import Dev_Assist from '../../assets/chatbot.png'
 
 const diff_years = (dt2, dt1) => {
     let diff = (dt2.getTime() - dt1.getTime()) / 1000;
@@ -63,28 +68,33 @@ export const navData = [
 
 export const projectsData = [
     {
+        imgSrc: Remember_It,
         title: 'Remember It - A Calendar App',
         desc: `A Calendar App, made using Next.js and inspired by Google Calendar, allowing users to
                 schedule events, add friends and more. It provides real-time updates and timely reminders
                 for easy time-management.`
     },
     {
+        imgSrc: STUK,
         title: 'STUK Software',
         desc: `STUK is a Tow Management Software that offers complete tow management software. We developed this software
                 placing the business first, allowing a trouble free and transparent service to the customer.`
     },
     {
+        imgSrc: Zillit,
         title: 'Zillit',
         desc: `ZILLIT App is all encompassing communication tool for the Entertainment Industry professionals and
                 for professionals in Other fields.`
     },
     {
+        imgSrc: KISS,
         title: 'Project K.I.S.S. - Keep It Simple Stupid',
         desc: `The project is aimed to provide an immersive experience for 
                 frontend practice (HTML, CSS and JavaScript) along with the presence of a Music 
                 Player and a To-Do List.`
     },
     {
+        imgSrc: Dev_Assist,
         title: 'Dev-Assist',
         desc: `This Virtual Assistant takes user’s queries related to coding as input and scrapes the
                 internet to provide a solution.`
@@ -228,6 +238,10 @@ export const footerSocials = [
         icon: <IoLogoDiscord />
     }
 ]
+
+export const intro = `A Software Engineer with expertise in FullStack Web Development and Data Science.
+                        I have rich experience building commerce websites and marketplaces, admin dashboards,
+                        assistance app services, websites for small businesses etc.`
 
 export const totalProjects = projectsData.length
 

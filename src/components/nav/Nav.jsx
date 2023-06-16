@@ -1,18 +1,16 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { navData, isInViewport, redirect } from '../common/data'
 import './Nav.css'
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState('header')
 
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      navData.forEach(({ section }) => {
-        if (isInViewport(document.getElementById(section)))
-          setActiveNav(section)
-      })
+  window.addEventListener('scroll', () => {
+    navData.forEach(({ section }) => {
+      if (isInViewport(document.getElementById(section)))
+        setActiveNav(section)
     })
-  }, [])
+  })
 
   return (
     <nav>

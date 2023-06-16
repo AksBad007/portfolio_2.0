@@ -22,6 +22,12 @@
     cursor: default;
 }
 
+.project__item-image img {
+    border-radius: 1.5rem;
+    aspect-ratio: 2/1;
+    background: transparent;
+}
+
 .project__item p {
     margin-bottom: 1rem;
 }
