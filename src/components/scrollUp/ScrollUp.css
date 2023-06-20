@@ -41,4 +41,8 @@
     #scrollup {
         right: 1rem;
     }
+
+    .show-scroll {
+        bottom: 8rem !important;
+    }
 }

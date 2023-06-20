@@ -11,7 +11,7 @@ import Zillit from '../../assets/zillit.png'
 import STUK from '../../assets/stuk.png'
 import Dev_Assist from '../../assets/chatbot.png'
 
-const diff_years = (dt2, dt1) => {
+const diff_years = (dt2 = new Date(), dt1 = new Date('01/07/2021')) => {
     let diff = (dt2.getTime() - dt1.getTime()) / 1000;
         diff /= (60 * 60 * 24);
 
@@ -245,7 +245,7 @@ export const intro = `A Software Engineer with expertise in FullStack Web Develo
 
 export const totalProjects = projectsData.length
 
-export const totalXp = diff_years(new Date(), new Date('12/6/2021'))
+export const totalXp = diff_years()
 
 export const isInViewport = (element) => {
     const rect = element.getBoundingClientRect()
