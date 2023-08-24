@@ -49,8 +49,8 @@ const Contact = () => {
           <article className='contact__option'>
             <HiOutlinePhone className='.contact__option-icon' />
             <h4>Phone</h4>
-            <h5>+91-7888688879</h5>
-            <a href='tel:+91-7888688879'>Contact Me</a>
+            <h5>+91-9915429585</h5>
+            <a href='tel:+91-9915429585'>Contact Me</a>
           </article>
         </div>
 
