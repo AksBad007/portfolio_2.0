@@ -16,8 +16,8 @@ const Footer = () => {
 
       <div className='footer__socials'>
         {
-          footerSocials.map(({ link, icon }, id) => (
-            <a key={ id } href={ link } target='_blank' rel='noreferrer'>{ icon }</a>
+          footerSocials.map(({ link, icon, label }, id) => (
+            <a key={ id } href={ link } target='_blank' rel='noreferrer' aria-label={ label }>{ icon }</a>
           ))
         }
       </div>

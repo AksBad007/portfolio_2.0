@@ -9,14 +9,14 @@ const Header = () => {
     <header id='header' className='container header__container'>
       <Heading intro='Hello, I&apos;m' main='Akshat Arora'/>
 
-      <h5 className='text-light'>Full-Stack Developer and Data Scientist</h5>
+      <h5 className='text-light'>Full Stack Developer</h5>
 
       <CTA />
 
       <div className='header__socials'>
         {
-          headerSocials.map(({ link, icon }, id) => (
-            <a key={ id } href={ link } target='_blank' rel='noreferrer'>{ icon }</a>
+          headerSocials.map(({ link, icon, label }, id) => (
+            <a key={ id } href={ link } target='_blank' rel='noreferrer' aria-label={ label }>{ icon }</a>
           ))
         }
       </div>
