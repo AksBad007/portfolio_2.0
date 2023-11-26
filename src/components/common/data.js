@@ -3,9 +3,11 @@ import { BiMessageSquareDetail } from 'react-icons/bi'
 // import { BiBook } from 'react-icons/bi'
 import { BsLinkedin, BsFileCode, BsTwitterX } from 'react-icons/bs'
 import { FaGithub } from 'react-icons/fa'
+import { FaHashnode } from "react-icons/fa6"
 import { FiInstagram } from 'react-icons/fi'
 import { IoLogoDiscord } from 'react-icons/io5'
 import { SiCodeproject } from 'react-icons/si'
+import { TbRss } from "react-icons/tb";
 import Wit_Warrior from '../../assets/witwarrior.png'
 import Shaadi_Vines from '../../assets/shaadivines.png'
 import Remember_It from '../../assets/calendar.png'
@@ -61,6 +63,11 @@ export const navData = [
         section: 'projects',
         title: 'Projects',
         icon: <SiCodeproject />
+    },
+    {
+        section: 'blogs',
+        title: 'Blogs',
+        icon: <TbRss />
     },
     {
         section: 'contact',
@@ -320,6 +327,11 @@ export const footerSocials = [
         icon: <BsTwitterX />,
         label: 'X (Twitter)',
     },
+    {
+        link: 'https://www.hashnode.com/@AksBad007/',
+        icon: <FaHashnode />,
+        label: 'Hashnode',
+    },
 ]
 
 export const intro = `I'm a Software Engineer with expertise in FullStack Web Development.
@@ -327,6 +339,34 @@ export const intro = `I'm a Software Engineer with expertise in FullStack Web De
                         my experience is a tapestry woven with diverse projects.`
 
 export const totalProjects = projectsData.length
+
+export const EMAIL = 'arora.akshat007@gmail.com'
+
+export const PHONE = '+91 99154-29585'
+
+export const query = `
+    {
+        publication(host: "aksbad007.hashnode.dev") {
+            title
+            url
+            posts(first: 3) {
+                edges {
+                    node {
+                        title
+                        url
+                        publishedAt
+                        seo {
+                            description
+                        }
+                        coverImage {
+                            url
+                        }
+                    }
+                }
+            }
+        }
+    }
+`
 
 export const isInViewport = (element) => {
     const rect = element.getBoundingClientRect()
