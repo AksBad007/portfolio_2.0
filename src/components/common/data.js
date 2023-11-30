@@ -209,14 +209,6 @@ export const skillsData = [
         domain: 'Programming Languages',
         skills: [
             {
-                name: 'C/C++',
-                lvl: 'Beginner',
-            },
-            {
-                name: 'Java',
-                lvl: 'Beginner',
-            },
-            {
                 name: 'JavaScript',
                 lvl: 'Experienced',
             },
@@ -228,19 +220,15 @@ export const skillsData = [
                 name: 'Python',
                 lvl: 'Experienced',
             },
+            {
+                name: 'Bash',
+                lvl: 'Beginner',
+            },
         ],
     },
     {
         domain: 'Miscellaneous',
         skills: [
-            {
-                name: 'WordPress',
-                lvl: 'Beginner',
-            },
-            {
-                name: 'Redux',
-                lvl: 'Beginner',
-            },
             {
                 name: 'SQL',
                 lvl: 'Intermediate',
