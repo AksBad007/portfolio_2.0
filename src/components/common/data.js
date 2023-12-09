@@ -1,6 +1,6 @@
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
 import { BiMessageSquareDetail } from 'react-icons/bi'
-// import { BiBook } from 'react-icons/bi'
+import { BiBook } from 'react-icons/bi'
 import { BsLinkedin, BsFileCode, BsTwitterX } from 'react-icons/bs'
 import { FaGithub } from 'react-icons/fa'
 import { FaHashnode } from "react-icons/fa6"
@@ -49,11 +49,11 @@ export const navData = [
         title: 'About Me',
         icon: <AiOutlineUser />
     },
-    // {
-    //     section: 'qualifications',
-    //     title: 'Qualifications',
-    //     icon: <BiBook />
-    // },
+    {
+        section: 'qualifications',
+        title: 'Qualifications',
+        icon: <BiBook />
+    },
     {
         section: 'skills',
         title: 'Skills',
@@ -253,50 +253,55 @@ export const skillsData = [
     },
 ]
 
-// export const educationData = [
-//     {
-//         major: 'Master\'s in Computer Applications',
-//         school: 'Guru Nanak Dev Univeristy',
-//         date: '2018 - 2023'
-//     },
-//     {
-//         major: 'Class XII',
-//         school: 'Shri Ram Ashram Sen. Sec. School',
-//         date: '2018'
-//     },
-//     {
-//         major: 'Class X',
-//         school: 'Shri Ram Ashram Sen. Sec. School',
-//         date: '2016'
-//     },
-// ]
+export const educationData = [
+    {
+        major: 'Master\'s in Computer Applications',
+        school: 'Guru Nanak Dev Univeristy',
+        date: '2021 - 2023'
+    },
+    {
+        major: 'Bachelor\'s in Computer Applications',
+        school: 'Guru Nanak Dev Univeristy',
+        date: '2018 - 2021'
+    },
+    {
+        major: 'Class XII',
+        school: 'Shri Ram Ashram Sen. Sec. School',
+        date: '2018'
+    },
+    {
+        major: 'Class X',
+        school: 'Shri Ram Ashram Sen. Sec. School',
+        date: '2016'
+    },
+]
 
-// export const xpData = [
-//     {
-//         role: 'Freelance Web Developer',
-//         company: 'Aubergine Solutions',
-//         location: 'Gujarat, India',
-//         date: 'July 2023 - Present'
-//     },
-//     {
-//         role: 'Web Developer',
-//         company: 'Mansa Infotech',
-//         location: 'Punjab, India',
-//         date: 'July 2022 - July 2023'
-//     },
-//     {
-//         role: 'Backend Developer',
-//         company: 'Rock IT Solutions',
-//         location: 'Punjab, India',
-//         date: 'Dec 2021 - July 2022'
-//     },
-//     {
-//         role: 'Frontend Developer (Intern)',
-//         company: 'Widhya',
-//         location: 'Remote',
-//         date: 'Jan 2021 - Feb 2021'
-//     },
-// ]
+export const xpData = [
+    {
+        role: 'Freelance Developer',
+        company: 'Self-Employed',
+        location: 'Remote',
+        date: 'July 2023 - Present'
+    },
+    {
+        role: 'Web Developer',
+        company: 'Mansa Infotech',
+        location: 'Punjab, India',
+        date: 'July 2022 - July 2023'
+    },
+    {
+        role: 'Backend Developer',
+        company: 'Rock IT Solutions',
+        location: 'Punjab, India',
+        date: 'Dec 2021 - July 2022'
+    },
+    {
+        role: 'Frontend Developer (Intern)',
+        company: 'Widhya',
+        location: 'Remote',
+        date: 'Jan 2021 - Feb 2021'
+    },
+]
 
 export const footerSocials = [
     {
