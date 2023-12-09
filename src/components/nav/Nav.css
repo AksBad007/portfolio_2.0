@@ -36,4 +36,8 @@ nav button.active {
     nav {
         padding: 0.7rem;
     }
+
+    nav button {
+        padding: 0.4rem;
+    }
 }
