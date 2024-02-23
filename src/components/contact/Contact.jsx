@@ -1,12 +1,10 @@
 import { useState, useRef } from 'react'
-import { HiOutlinePhone } from 'react-icons/hi'
-import { MdOutlineEmail } from 'react-icons/md'
 import { RiSendPlaneFill } from 'react-icons/ri'
 import { ToastContainer, toast } from 'react-toastify'
 import emailjs from 'emailjs-com'
 import Heading from '../common/Heading'
 import Loader from '../common/Loader'
-import { EMAIL, PHONE } from '../common/data'
+import { contactDetails } from '../common/data'
 import 'react-toastify/dist/ReactToastify.css'
 import './Contact.css'
 
@@ -26,12 +24,12 @@ const Contact = () => {
     )
       .then(() => {
         toast.info('Thanks for reaching out 😃.', { icon: false })
-        setLoadingState(false)
         e.target.reset()
       }, () => {
         toast.error('Something Went Wrong!!!.')
-        setLoadingState(false)
       })
+
+      setLoadingState(false)
   }
 
   return (
@@ -40,19 +38,16 @@ const Contact = () => {
 
       <div className='container contact__container'>
         <div className='contact__options'>
-          <article className='contact__option'>
-            <MdOutlineEmail className='.contact__option-icon' />
-            <h4>Email</h4>
-            <h5>{ EMAIL }</h5>
-            <a href={`mailto:${ EMAIL }`}>Send a Message</a>
-          </article>
-
-          <article className='contact__option'>
-            <HiOutlinePhone className='.contact__option-icon' />
-            <h4>Phone</h4>
-            <h5>{ PHONE }</h5>
-            <a href={`tel:${ PHONE }`}>Contact Me</a>
-          </article>
+          {
+            contactDetails.map(({icon, type, label, link}, idx) => (
+              <article key={idx} className='contact__option'>
+                { icon }
+                <h4>{ type }</h4>
+                <h5>{ label }</h5>
+                <a href={ link.url }>{ link.text }</a>
+              </article>
+            ))
+          }
         </div>
 
         <form ref={ form } onSubmit={ sendEmail }>

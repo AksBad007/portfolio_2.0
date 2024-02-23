@@ -7,7 +7,7 @@ const Projects = () => {
   const projectItems = projectsData.map(({ imgSrc, title, desc, github, demo }) => (
     <>
       <div className='project__item-image'>
-        <img src={ imgSrc } alt='Project Preview' />
+        <img src={ imgSrc } alt='Project Preview' loading='lazy' />
       </div>
 
       <h3>{ title }</h3>
@@ -28,7 +28,6 @@ const Projects = () => {
       <SwiperSlider
         swiperClass='projects__container'
         itemClass='project__item'
-        minWidth={ 700 }
         content={ projectItems }
       />
     </section>

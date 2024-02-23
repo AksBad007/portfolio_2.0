@@ -22,7 +22,7 @@ const Header = () => {
       </div>
 
       <div className='me'>
-        <img src={ ME } alt='my profile pic' />
+        <img src={ ME } alt='my profile pic' loading='eager' />
       </div>
 
       <button onClick={() => redirect('about')} className='scroll__down'>Scroll Down</button>

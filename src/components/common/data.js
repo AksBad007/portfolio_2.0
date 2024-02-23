@@ -1,13 +1,13 @@
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
-import { BiMessageSquareDetail } from 'react-icons/bi'
-import { BiBook } from 'react-icons/bi'
+import { BiMessageSquareDetail, BiBook } from 'react-icons/bi'
 import { BsLinkedin, BsFileCode, BsTwitterX } from 'react-icons/bs'
 import { FaGithub } from 'react-icons/fa'
 import { FaHashnode } from "react-icons/fa6"
-import { FiInstagram } from 'react-icons/fi'
 import { IoLogoDiscord } from 'react-icons/io5'
-import { SiCodeproject } from 'react-icons/si'
-import { TbRss } from "react-icons/tb";
+import { HiOutlinePhone } from 'react-icons/hi'
+import { MdOutlineEmail, MdCalendarMonth } from 'react-icons/md'
+import { SiCodeproject, SiUpwork, SiFreelancer } from 'react-icons/si'
+import { TbRss } from "react-icons/tb"
 import Wit_Warrior from '../../assets/witwarrior.png'
 import Shaadi_Vines from '../../assets/shaadivines.png'
 import Remember_It from '../../assets/calendar.png'
@@ -16,8 +16,8 @@ import STUK from '../../assets/stuk.png'
 import Zillit from '../../assets/zillit.png'
 import KISS from '../../assets/editor.jpg'
 
-let diff = (new Date().getTime() - new Date('01/07/2021').getTime()) / 1000;
-diff /= (60 * 60 * 24);
+let diff = (new Date().getTime() - new Date('12/06/2021').getTime()) / 1000
+diff /= (60 * 60 * 24)
 
 const LinkedInSocial = {
     link: 'https://www.linkedin.com/in/akshat-arora-007/',
@@ -25,7 +25,7 @@ const LinkedInSocial = {
     label: 'LinkedIn',
 }
 
-export const totalXp = Math.abs(Math.floor(diff/365.25));
+export const totalXp = Math.abs(Math.floor(diff/365.25))
 
 export const GitHubSocial = 'https://github.com/AksBad007/'
 
@@ -117,7 +117,7 @@ export const projectsData = [
         title: 'Zillit',
         desc: `ZILLIT App is all encompassing communication tool for the Entertainment Industry professionals and
                 for professionals in Other fields.`,
-        demo: 'https://web.zillit.com/',
+        demo: 'https://apps.apple.com/in/app/zillit/id6443424188',
     },
     {
         imgSrc: KISS,
@@ -147,8 +147,12 @@ export const skillsData = [
                 lvl: 'Intermediate',
             },
             {
-                name: 'Bootstrap',
+                name: 'Tailwind CSS',
                 lvl: 'Intermediate',
+            },
+            {
+                name: 'Bootstrap',
+                lvl: 'Experienced',
             },
             {
                 name: 'JQuery',
@@ -196,8 +200,16 @@ export const skillsData = [
                 lvl: 'Beginner',
             },
             {
-                name: 'Web Sockets',
+                name: 'Socket.IO',
                 lvl: 'Intermediate',
+            },
+            {
+                name: 'Strapi',
+                lvl: 'Beginner',
+            },
+            {
+                name: 'Contentful',
+                lvl: 'Beginner',
             },
             {
                 name: 'AWS',
@@ -221,6 +233,14 @@ export const skillsData = [
                 lvl: 'Experienced',
             },
             {
+                name: 'C/C++',
+                lvl: 'Intermediate',
+            },
+            {
+                name: 'PHP',
+                lvl: 'Beginner',
+            },
+            {
                 name: 'Bash',
                 lvl: 'Beginner',
             },
@@ -230,12 +250,16 @@ export const skillsData = [
         domain: 'Miscellaneous',
         skills: [
             {
+                name: 'Electron.js',
+                lvl: 'Beginner',
+            },
+            {
                 name: 'SQL',
                 lvl: 'Intermediate',
             },
             {
                 name: 'MongoDB',
-                lvl: 'Experienced',
+                lvl: 'Intermediate',
             },
             {
                 name: 'Linux',
@@ -248,6 +272,14 @@ export const skillsData = [
             {
                 name: 'Jira',
                 lvl: 'Intermediate',
+            },
+            {
+                name: 'WordPress',
+                lvl: 'Beginner',
+            },
+            {
+                name: 'CI/CD',
+                lvl: 'Beginner',
             },
         ],
     },
@@ -304,11 +336,6 @@ export const xpData = [
 ]
 
 export const footerSocials = [
-    {
-        link: 'https://www.instagram.com/akshat_bad_007/',
-        icon: <FiInstagram />,
-        label: 'Instagram',
-    },
     LinkedInSocial,
     {
         link: 'https://www.discordapp.com/users/Akshat#4299/',
@@ -325,6 +352,16 @@ export const footerSocials = [
         icon: <FaHashnode />,
         label: 'Hashnode',
     },
+    {
+        link: 'https://www.upwork.com/freelancers/~01dfd3051608186118/',
+        icon: <SiUpwork />,
+        label: 'UpWork',
+    },
+    {
+        link: 'https://www.freelancer.in/u/AkshatArora007/',
+        icon: <SiFreelancer />,
+        label: 'Freelancer',
+    },
 ]
 
 export const intro = `I'm a Software Engineer with expertise in FullStack Web Development.
@@ -333,9 +370,41 @@ export const intro = `I'm a Software Engineer with expertise in FullStack Web De
 
 export const totalProjects = projectsData.length
 
-export const EMAIL = 'arora.akshat007@gmail.com'
-
-export const PHONE = '+91 99154-29585'
+export const contactDetails = [
+    {
+        icon: <MdCalendarMonth className='contact__option-icon' />,
+        type: 'Schedule a Meeting',
+        label: 'Calendly',
+        get link () {
+            return {
+                url: `https://calendly.com/akshat-arora/project-overview/`,
+                text: "Let's Connect",
+            }
+        },
+    },
+    {
+        icon: <MdOutlineEmail className='contact__option-icon' />,
+        type: 'Email',
+        label: 'arora.akshat007@gmail.com',
+        get link () {
+            return {
+                url: `mailto:${ this.label }`,
+                text: "Send a Message",
+            }
+        },
+    },
+    {
+        icon: <HiOutlinePhone className='contact__option-icon' />,
+        type: 'Phone',
+        label: '+91 99154-29585',
+        get link () {
+            return {
+                url: `tel:${ this.label }`,
+                text: "Contact Me",
+            }
+        },
+    },
+]
 
 export const query = `
     {

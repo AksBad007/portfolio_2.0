@@ -32,7 +32,7 @@ const Blogs = () => {
   const blogs = blogData.posts.map(({ title, url, seo: { description }, coverImage }) => (
     <>
       <div className='project__item-image'>
-        <img src={ coverImage.url } alt='Blog Cover' />
+        <img src={ coverImage.url } alt='Blog Cover' loading='lazy' />
       </div>
 
       <h3>{ title }</h3>
@@ -57,7 +57,6 @@ const Blogs = () => {
         <SwiperSlider
           swiperClass='projects__container'
           itemClass='project__item'
-          minWidth={ 700 }
           content={ blogs }
         />
 
