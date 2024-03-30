@@ -9,5 +9,15 @@
                 }
             ]
         }
+    ],
+    "rewrites": [
+        {
+            "source": "/blog",
+            "destination": "https://website-blogs-psi.vercel.app/blog"
+        },
+        {
+            "source": "/blog/:path*",
+            "destination": "https://website-blogs-psi.vercel.app/blog/:path*"
+        }
     ]
 }

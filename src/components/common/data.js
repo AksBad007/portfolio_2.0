@@ -212,6 +212,10 @@ export const skillsData = [
                 lvl: 'Beginner',
             },
             {
+                name: 'NGINX',
+                lvl: 'Intermediate',
+            },
+            {
                 name: 'AWS',
                 lvl: 'Intermediate',
             },
@@ -275,6 +279,10 @@ export const skillsData = [
             },
             {
                 name: 'WordPress',
+                lvl: 'Beginner',
+            },
+            {
+                name: 'WooCommerce',
                 lvl: 'Beginner',
             },
             {
@@ -409,15 +417,15 @@ export const contactDetails = [
 export const query = `
     {
         publication(host: "aksbad007.hashnode.dev") {
-            title
             url
+            title
             posts(first: 3) {
                 edges {
                     node {
-                        title
-                        url
+                        slug
                         publishedAt
                         seo {
+                            title
                             description
                         }
                         coverImage {

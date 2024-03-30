@@ -1,3 +1,3 @@
 My Portfolio. Built using React.js.
 
-Take a look at https://portfolio-akshat-arora.vercel.app/
+Take a look at https://www.akshatarora.in/

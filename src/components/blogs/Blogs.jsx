@@ -7,7 +7,7 @@ import './Blogs.css'
 const Blogs = () => {
   const [blogData, setBlogData] = useState({
     title: '',
-    url: '',
+    slug: '',
     posts: [],
   })
 
@@ -21,18 +21,18 @@ const Blogs = () => {
     })
     const ApiResponse = await response.json()
 
-    const { publication: { title, url, posts: { edges } } } = ApiResponse.data
+    const { publication: { title, slug, posts: { edges } } } = ApiResponse.data
     setBlogData({
       title,
-      url,
+      slug,
       posts: edges.map(({ node }) => node)
     })
   }
 
-  const blogs = blogData.posts.map(({ title, url, seo: { description }, coverImage }) => (
+  const blogs = blogData.posts.map(({ slug, seo: { title, description }, coverImage: { url } }) => (
     <>
       <div className='project__item-image'>
-        <img src={ coverImage.url } alt='Blog Cover' loading='lazy' />
+        <img src={ url } alt='Blog Cover' loading='lazy' />
       </div>
 
       <h3>{ title }</h3>
@@ -40,7 +40,9 @@ const Blogs = () => {
       <p>{ description }</p>
 
       <div className='project__item-cta'>
-        <a href={ url } className='btn btn-primary' target='_blank' rel='noreferrer' aria-label='Read more'>Read more</a>
+        <a href={ "/blog/" + slug } className='btn btn-primary' target='_blank' rel='noreferrer' aria-label='Read more'>
+          Read more
+        </a>
       </div>
     </>
   ))
@@ -60,7 +62,7 @@ const Blogs = () => {
           content={ blogs }
         />
 
-        <a href={ blogData.url } className='btn btn-primary' target='_blank' rel='noreferrer' aria-label='View all'>View all</a>
+        <a href="/blog" className='btn btn-primary' target='_blank' rel='noreferrer' aria-label='View all'>View all</a>
       </div>
     </section>
   )
