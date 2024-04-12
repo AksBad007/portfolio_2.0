@@ -1,7 +1,7 @@
 import Heading from '../common/Heading'
 import CTA from '../common/CTA'
 import { headerSocials, redirect } from '../common/data'
-import ME from '../../assets/profile.jpg'
+import ME from '../../assets/profile.webp'
 import './Header.css'
 
 const Header = () => {

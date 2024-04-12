@@ -3,7 +3,7 @@ import { VscFolderLibrary } from 'react-icons/vsc'
 import Heading from '../common/Heading'
 import CTA from '../common/CTA'
 import { intro, totalProjects, totalXp } from '../common/data'
-import ME from '../../assets/profile 2.jpg'
+import ME from '../../assets/profile 2.webp'
 import './About.css'
 
 const About = () => {

@@ -29,15 +29,15 @@ const Blogs = () => {
     })
   }
 
-  const blogs = blogData.posts.map(({ slug, seo: { title, description }, coverImage: { url } }) => (
+  const blogs = blogData.posts.map(({ slug, title, seo, coverImage: { url } }) => (
     <>
       <div className='project__item-image'>
         <img src={ url } alt='Blog Cover' loading='lazy' />
       </div>
 
-      <h3>{ title }</h3>
+      <h3>{ seo.title || title }</h3>
 
-      <p>{ description }</p>
+      <p>{ seo.description }</p>
 
       <div className='project__item-cta'>
         <a href={ "/blog/" + slug } className='btn btn-primary' target='_blank' rel='noreferrer' aria-label='Read more'>

@@ -2,19 +2,20 @@ import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
 import { BiMessageSquareDetail, BiBook } from 'react-icons/bi'
 import { BsLinkedin, BsFileCode, BsTwitterX } from 'react-icons/bs'
 import { FaGithub } from 'react-icons/fa'
-import { FaHashnode } from "react-icons/fa6"
+// import { FaHashnode } from "react-icons/fa6"
 import { IoLogoDiscord } from 'react-icons/io5'
 import { HiOutlinePhone } from 'react-icons/hi'
 import { MdOutlineEmail, MdCalendarMonth } from 'react-icons/md'
 import { SiCodeproject, SiUpwork, SiFreelancer } from 'react-icons/si'
 import { TbRss } from "react-icons/tb"
-import Wit_Warrior from '../../assets/witwarrior.png'
-import Shaadi_Vines from '../../assets/shaadivines.png'
-import Remember_It from '../../assets/calendar.png'
-import EdTech from '../../assets/edtech.png'
-import STUK from '../../assets/stuk.png'
-import Zillit from '../../assets/zillit.png'
-import KISS from '../../assets/editor.jpg'
+import Wit_Warrior from '../../assets/witwarrior.webp'
+import Shaadi_Vines from '../../assets/shaadivines.webp'
+import Remember_It from '../../assets/calendar.webp'
+import EdTech from '../../assets/edtech.webp'
+import STUK from '../../assets/stuk.webp'
+import Zillit from '../../assets/zillit.webp'
+import KISS from '../../assets/editor.webp'
+import ChatterType from '../../assets/terminal.webp'
 
 let diff = (new Date().getTime() - new Date('12/06/2021').getTime()) / 1000
 diff /= (60 * 60 * 24)
@@ -96,7 +97,8 @@ export const projectsData = [
         desc: `A Calendar App, made using Next.js and inspired by Google Calendar, allowing users to
                 schedule events, add friends and more. It provides real-time updates and timely reminders
                 for easy time-management.`,
-        github: 'https://github.com/AksBad007/remember_it',
+        github: 'https://github.com/AksBad007/remember_it/',
+        demo: 'https://cooperative-vast-albacore.glitch.me/',
     },
     {
         imgSrc: EdTech,
@@ -113,11 +115,18 @@ export const projectsData = [
         demo: 'https://www.stuksoftware.com/',
     },
     {
+        imgSrc: ChatterType,
+        title: 'Chatter-Type',
+        desc: `Chatter-Type is a terminal-style chat application. Inspired by all the hacker/superhero movies, I supports chats, groups, fullscreen mode and much more.`,
+        github: 'https://github.com/AksBad007/chatter-type/',
+        demo: 'https://fast-four-walnut.glitch.me/',
+    },
+    {
         imgSrc: Zillit,
         title: 'Zillit',
         desc: `ZILLIT App is all encompassing communication tool for the Entertainment Industry professionals and
                 for professionals in Other fields.`,
-        demo: 'https://apps.apple.com/in/app/zillit/id6443424188',
+        demo: 'https://apps.apple.com/in/app/zillit/id6443424188/',
     },
     {
         imgSrc: KISS,
@@ -125,7 +134,7 @@ export const projectsData = [
         desc: `The project is aimed to provide an immersive experience for 
                 frontend practice (HTML, CSS and JavaScript) along with the presence of a Music 
                 Player and a To-Do List.`,
-        github: 'https://github.com/AksBad007/Project-K.I.S.S.',
+        github: 'https://github.com/AksBad007/Project-K.I.S.S./',
         demo: 'https://project-k-i-s-s.vercel.app/',
     },
 ]
@@ -135,11 +144,7 @@ export const skillsData = [
         domain: 'Frontend Development',
         skills: [
             {
-                name: 'HTML',
-                lvl: 'Experienced',
-            },
-            {
-                name: 'CSS',
+                name: 'HTML/CSS',
                 lvl: 'Experienced',
             },
             {
@@ -147,12 +152,12 @@ export const skillsData = [
                 lvl: 'Intermediate',
             },
             {
-                name: 'Tailwind CSS',
-                lvl: 'Intermediate',
-            },
-            {
                 name: 'Bootstrap',
                 lvl: 'Experienced',
+            },
+            {
+                name: 'Tailwind CSS',
+                lvl: 'Intermediate',
             },
             {
                 name: 'JQuery',
@@ -204,6 +209,10 @@ export const skillsData = [
                 lvl: 'Intermediate',
             },
             {
+                name: 'WordPress',
+                lvl: 'Intermediate',
+            },
+            {
                 name: 'Strapi',
                 lvl: 'Beginner',
             },
@@ -245,6 +254,10 @@ export const skillsData = [
                 lvl: 'Beginner',
             },
             {
+                name: 'SQL',
+                lvl: 'Intermediate',
+            },
+            {
                 name: 'Bash',
                 lvl: 'Beginner',
             },
@@ -254,16 +267,16 @@ export const skillsData = [
         domain: 'Miscellaneous',
         skills: [
             {
+                name: 'MongoDB',
+                lvl: 'Intermediate',
+            },
+            {
                 name: 'Electron.js',
                 lvl: 'Beginner',
             },
             {
-                name: 'SQL',
-                lvl: 'Intermediate',
-            },
-            {
-                name: 'MongoDB',
-                lvl: 'Intermediate',
+                name: 'WooCommerce',
+                lvl: 'Beginner',
             },
             {
                 name: 'Linux',
@@ -276,14 +289,6 @@ export const skillsData = [
             {
                 name: 'Jira',
                 lvl: 'Intermediate',
-            },
-            {
-                name: 'WordPress',
-                lvl: 'Beginner',
-            },
-            {
-                name: 'WooCommerce',
-                lvl: 'Beginner',
             },
             {
                 name: 'CI/CD',
@@ -355,11 +360,11 @@ export const footerSocials = [
         icon: <BsTwitterX />,
         label: 'X (Twitter)',
     },
-    {
-        link: 'https://www.hashnode.com/@AksBad007/',
-        icon: <FaHashnode />,
-        label: 'Hashnode',
-    },
+    // {
+    //     link: 'https://www.hashnode.com/@AksBad007/',
+    //     icon: <FaHashnode />,
+    //     label: 'Hashnode',
+    // },
     {
         link: 'https://www.upwork.com/freelancers/~01dfd3051608186118/',
         icon: <SiUpwork />,
@@ -422,6 +427,7 @@ export const query = `
             posts(first: 3) {
                 edges {
                     node {
+                        title
                         slug
                         publishedAt
                         seo {
