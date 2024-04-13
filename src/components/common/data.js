@@ -398,7 +398,7 @@ export const contactDetails = [
     {
         icon: <MdOutlineEmail className='contact__option-icon' />,
         type: 'Email',
-        label: 'arora.akshat007@gmail.com',
+        label: 'hello@akshatarora.in',
         get link () {
             return {
                 url: `mailto:${ this.label }`,
