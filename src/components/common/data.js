@@ -1,8 +1,7 @@
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
-import { BiMessageSquareDetail, BiBook } from 'react-icons/bi'
+import { BiMessageSquareDetail } from 'react-icons/bi'
 import { BsLinkedin, BsFileCode, BsTwitterX } from 'react-icons/bs'
 import { FaGithub } from 'react-icons/fa'
-// import { FaHashnode } from "react-icons/fa6"
 import { IoLogoDiscord } from 'react-icons/io5'
 import { HiOutlinePhone } from 'react-icons/hi'
 import { MdOutlineEmail, MdCalendarMonth } from 'react-icons/md'
@@ -17,7 +16,7 @@ import Zillit from '../../assets/zillit.webp'
 import KISS from '../../assets/editor.webp'
 import ChatterType from '../../assets/terminal.webp'
 
-let diff = (new Date().getTime() - new Date('12/06/2021').getTime()) / 1000
+let diff = (new Date().getTime() - new Date('01/07/2021').getTime()) / 1000
 diff /= (60 * 60 * 24)
 
 const LinkedInSocial = {
@@ -49,11 +48,6 @@ export const navData = [
         section: 'about',
         title: 'About Me',
         icon: <AiOutlineUser />
-    },
-    {
-        section: 'qualifications',
-        title: 'Qualifications',
-        icon: <BiBook />
     },
     {
         section: 'skills',
@@ -141,15 +135,68 @@ export const projectsData = [
 
 export const skillsData = [
     {
-        domain: 'Frontend Development',
+        domain: 'Programming Languages',
         skills: [
             {
-                name: 'HTML/CSS',
+                name: 'HTML',
+                lvl: 'Experienced',
+            },
+            {
+                name: 'CSS',
                 lvl: 'Experienced',
             },
             {
                 name: 'Sass',
                 lvl: 'Intermediate',
+            },
+            {
+                name: 'JavaScript',
+                lvl: 'Experienced',
+            },
+            {
+                name: 'TypeScript',
+                lvl: 'Intermediate',
+            },
+            {
+                name: 'Python',
+                lvl: 'Experienced',
+            },
+            {
+                name: 'PHP',
+                lvl: 'Beginner',
+            },
+            {
+                name: 'SQL',
+                lvl: 'Intermediate',
+            },
+            {
+                name: 'Bash',
+                lvl: 'Beginner',
+            },
+        ],
+    },
+    {
+        domain: 'Frontend Development',
+        skills: [
+            {
+                name: 'React.js',
+                lvl: 'Experienced',
+            },
+            {
+                name: 'Angular.js',
+                lvl: 'Intermediate',
+            },
+            {
+                name: 'Vue.js',
+                lvl: 'Beginner',
+            },
+            {
+                name: 'Gatsby',
+                lvl: 'Experienced',
+            },
+            {
+                name: 'Next.js',
+                lvl: 'Experienced',
             },
             {
                 name: 'Bootstrap',
@@ -164,23 +211,7 @@ export const skillsData = [
                 lvl: 'Intermediate',
             },
             {
-                name: 'React.js',
-                lvl: 'Experienced',
-            },
-            {
-                name: 'Gatsby',
-                lvl: 'Experienced',
-            },
-            {
-                name: 'Next.js',
-                lvl: 'Experienced',
-            },
-            {
-                name: 'Angular.js',
-                lvl: 'Intermediate',
-            },
-            {
-                name: 'Vue.js',
+                name: 'WebFlow',
                 lvl: 'Beginner',
             },
         ],
@@ -231,39 +262,6 @@ export const skillsData = [
         ],
     },
     {
-        domain: 'Programming Languages',
-        skills: [
-            {
-                name: 'JavaScript',
-                lvl: 'Experienced',
-            },
-            {
-                name: 'TypeScript',
-                lvl: 'Intermediate',
-            },
-            {
-                name: 'Python',
-                lvl: 'Experienced',
-            },
-            {
-                name: 'C/C++',
-                lvl: 'Intermediate',
-            },
-            {
-                name: 'PHP',
-                lvl: 'Beginner',
-            },
-            {
-                name: 'SQL',
-                lvl: 'Intermediate',
-            },
-            {
-                name: 'Bash',
-                lvl: 'Beginner',
-            },
-        ],
-    },
-    {
         domain: 'Miscellaneous',
         skills: [
             {
@@ -298,56 +296,6 @@ export const skillsData = [
     },
 ]
 
-export const educationData = [
-    {
-        major: 'Master\'s in Computer Applications',
-        school: 'Guru Nanak Dev Univeristy',
-        date: '2021 - 2023'
-    },
-    {
-        major: 'Bachelor\'s in Computer Applications',
-        school: 'Guru Nanak Dev Univeristy',
-        date: '2018 - 2021'
-    },
-    {
-        major: 'Class XII',
-        school: 'Shri Ram Ashram Sen. Sec. School',
-        date: '2018'
-    },
-    {
-        major: 'Class X',
-        school: 'Shri Ram Ashram Sen. Sec. School',
-        date: '2016'
-    },
-]
-
-export const xpData = [
-    {
-        role: 'Freelance Developer',
-        company: 'Self-Employed',
-        location: 'Remote',
-        date: 'July 2023 - Present'
-    },
-    {
-        role: 'Web Developer',
-        company: 'Mansa Infotech',
-        location: 'Punjab, India',
-        date: 'July 2022 - July 2023'
-    },
-    {
-        role: 'Backend Developer',
-        company: 'Rock IT Solutions',
-        location: 'Punjab, India',
-        date: 'Dec 2021 - July 2022'
-    },
-    {
-        role: 'Frontend Developer (Intern)',
-        company: 'Widhya',
-        location: 'Remote',
-        date: 'Jan 2021 - Feb 2021'
-    },
-]
-
 export const footerSocials = [
     LinkedInSocial,
     {
@@ -360,11 +308,6 @@ export const footerSocials = [
         icon: <BsTwitterX />,
         label: 'X (Twitter)',
     },
-    // {
-    //     link: 'https://www.hashnode.com/@AksBad007/',
-    //     icon: <FaHashnode />,
-    //     label: 'Hashnode',
-    // },
     {
         link: 'https://www.upwork.com/freelancers/~01dfd3051608186118/',
         icon: <SiUpwork />,

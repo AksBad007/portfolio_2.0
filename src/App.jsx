@@ -2,7 +2,6 @@ import { SpeedInsights } from "@vercel/speed-insights/react"
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
 import About from './components/about/About'
-import Qualifications from './components/qualifications/Qualifications'
 import Skills from './components/skills/Skills'
 import Projects from './components/projects/Projects'
 import Blogs from './components/blogs/Blogs'
@@ -16,7 +15,6 @@ const App = () => {
       <Header />
       <Nav />
       <About />
-      <Qualifications />
       <Skills />
       <Projects />
       <Blogs />
