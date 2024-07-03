@@ -2,10 +2,9 @@ import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
 import { BiMessageSquareDetail } from 'react-icons/bi'
 import { BsLinkedin, BsFileCode, BsTwitterX } from 'react-icons/bs'
 import { FaGithub } from 'react-icons/fa'
-import { IoLogoDiscord } from 'react-icons/io5'
 import { HiOutlinePhone } from 'react-icons/hi'
 import { MdOutlineEmail, MdCalendarMonth } from 'react-icons/md'
-import { SiCodeproject, SiUpwork, SiFreelancer } from 'react-icons/si'
+import { SiCodeproject, SiUpwork } from 'react-icons/si'
 import { TbRss } from "react-icons/tb"
 import Wit_Warrior from '../../assets/witwarrior.webp'
 import Shaadi_Vines from '../../assets/shaadivines.webp'
@@ -183,7 +182,7 @@ export const skillsData = [
                 lvl: 'Experienced',
             },
             {
-                name: 'Angular.js',
+                name: 'Angular',
                 lvl: 'Intermediate',
             },
             {
@@ -208,6 +207,10 @@ export const skillsData = [
             },
             {
                 name: 'JQuery',
+                lvl: 'Intermediate',
+            },
+            {
+                name: 'React Native',
                 lvl: 'Intermediate',
             },
             {
@@ -240,10 +243,6 @@ export const skillsData = [
                 lvl: 'Intermediate',
             },
             {
-                name: 'WordPress',
-                lvl: 'Intermediate',
-            },
-            {
                 name: 'Strapi',
                 lvl: 'Beginner',
             },
@@ -259,6 +258,10 @@ export const skillsData = [
                 name: 'AWS',
                 lvl: 'Intermediate',
             },
+            {
+                name: 'Firebase',
+                lvl: 'Intermediate',
+            },
         ],
     },
     {
@@ -271,6 +274,10 @@ export const skillsData = [
             {
                 name: 'Electron.js',
                 lvl: 'Beginner',
+            },
+            {
+                name: 'WordPress',
+                lvl: 'Intermediate',
             },
             {
                 name: 'WooCommerce',
@@ -299,11 +306,6 @@ export const skillsData = [
 export const footerSocials = [
     LinkedInSocial,
     {
-        link: 'https://www.discordapp.com/users/Akshat#4299/',
-        icon: <IoLogoDiscord />,
-        label: 'Discord',
-    },
-    {
         link: 'https://twitter.com/AksBad007/',
         icon: <BsTwitterX />,
         label: 'X (Twitter)',
@@ -313,14 +315,9 @@ export const footerSocials = [
         icon: <SiUpwork />,
         label: 'UpWork',
     },
-    {
-        link: 'https://www.freelancer.in/u/AkshatArora007/',
-        icon: <SiFreelancer />,
-        label: 'Freelancer',
-    },
 ]
 
-export const intro = `I'm a Software Engineer with expertise in FullStack Web Development.
+export const intro = `I'm a Software Engineer with expertise in Full Stack Web Development.
                         From crafting crafting visually stunning websites to developing developing secure and robust web applications,
                         my experience is a tapestry woven with diverse projects.`
 
